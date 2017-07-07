@@ -3,6 +3,14 @@ package examples;
 public class Robot {
 	private int maxSpeed;
 	
+	public Robot() {
+		this.maxSpeed = 21;
+	}
+	
+	public Robot(int startSpeed) {
+		this.maxSpeed = startSpeed;
+	}
+	
 	public int getMaxSpeed() {
 		return maxSpeed;
 	}
