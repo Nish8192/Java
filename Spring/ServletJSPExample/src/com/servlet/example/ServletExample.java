@@ -31,9 +31,9 @@ public class ServletExample extends HttpServlet {
 		PrintWriter output = response.getWriter();
 //		output.println("A Dynamic Web Application Servlet!!!");
 		output.println("<html>");
-		output.println("<title>First Java Web Page!!</title>");
+		output.println("<title>Rendered from Servlet!!</title>");
 		output.println("<body>");
-		output.println("<h1 style='text-align:center'>WELCOME TO THE WORLD OF JAVA!!! :D</h1>");
+		output.println("<h1 style='text-align:center'>THIS PAGE WAS RENDERED FROM A SERVLET (NO BUENO)</h1>");
 		output.println("</body>");
 		output.println("</html>");
 	}
