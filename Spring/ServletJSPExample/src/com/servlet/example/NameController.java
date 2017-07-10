@@ -26,11 +26,24 @@ public class NameController extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter output = response.getWriter();
-		
+				
 		String firstName = request.getParameter("first_name");
 		String lastName = request.getParameter("last_name");
 		
-		output.println("Welcome to the show " + firstName + " " + lastName);
+		if(firstName == null && lastName == null) {
+			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		}
+		else {
+			request.setAttribute("firstName", firstName);
+			request.setAttribute("lastName", lastName);
+			getServletContext().getRequestDispatcher("/welcome.jsp").forward(request, response);
+		}
+		
+		//Does Work
+		//output.println("Welcome to the show " + firstName + " " + lastName + "!!!");
+		
+		//Does not work
+		//output.println("Welcome to the show ${firstName} ${lastName}!!! :D");
 	}
 
 }
