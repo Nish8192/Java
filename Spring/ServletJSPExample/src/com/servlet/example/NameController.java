@@ -25,7 +25,7 @@ public class NameController extends HttpServlet {
     }
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter output = response.getWriter();
+//		PrintWriter output = response.getWriter();
 				
 		String firstName = request.getParameter("first_name");
 		String lastName = request.getParameter("last_name");
